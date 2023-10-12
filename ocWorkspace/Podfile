@@ -1,0 +1,22 @@
+# 平台最低版本
+platform :ios, '10.0'
+
+use_frameworks!
+
+# workspace文件名
+workspace 'OCWorkspace.xcworkspace'
+
+# 主工程路径
+project 'aa/aa.xcodeproj’
+
+target 'aa' do
+    project 'aa/aa.xcodeproj’
+    # 自己的引用
+    # 也可以指定自己的platform
+end
+
+target 'bb' do
+    project 'bb/bb.xcodeproj’
+    pod 'Masonry'
+end
+
